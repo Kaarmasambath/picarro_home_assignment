@@ -4,7 +4,8 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import java.awt.*;
+import java.awt.Desktop;
+import java.awt.GraphicsEnvironment;
 import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
@@ -29,11 +30,19 @@ public final class ExtentReport {
         }
     }
 
-    public static void flushReport() throws IOException {
+    public static void flushReport() {
         if (extent != null) {
             extent.flush();
             ExtentManager.unLoad();
-            Desktop.getDesktop().browse(new File(EXTENT_REPORT_PATH).toURI());
+            if (!GraphicsEnvironment.isHeadless() && Desktop.isDesktopSupported()) {
+                try {
+                    Desktop.getDesktop().browse(new File(EXTENT_REPORT_PATH).toURI());
+                } catch (IOException e) {
+                    System.out.println("Report generated at: " + EXTENT_REPORT_PATH);
+                }
+            } else {
+                System.out.println("Report generated at: " + EXTENT_REPORT_PATH);
+            }
         }
     }
 
