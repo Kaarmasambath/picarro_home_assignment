@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="UI Test Suite">
+
+    <listeners>
+        <listener class-name="com.qa.listeners.ListenersClass"/>
+    </listeners>
+
+    <test name="UI Tests - OrangeHRM">
+        <classes>
+            <class name="com.qa.ui.LoginTest"/>
+            <class name="com.qa.ui.NavigationTest"/>
+            <class name="com.qa.ui.PimAddEmployeeTest"/>
+        </classes>
+    </test>
+
+</suite>

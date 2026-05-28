@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "REST Countries API Response Schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["name", "cca2", "cca3", "region"],
+    "properties": {
+      "name": {
+        "type": "object",
+        "required": ["common", "official"],
+        "properties": {
+          "common": {
+            "type": "string"
+          },
+          "official": {
+            "type": "string"
+          },
+          "nativeName": {
+            "type": "object"
+          }
+        }
+      },
+      "tld": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "cca2": {
+        "type": "string",
+        "pattern": "^[A-Z]{2}$"
+      },
+      "cca3": {
+        "type": "string",
+        "pattern": "^[A-Z]{3}$"
+      },
+      "capital": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "region": {
+        "type": "string",
+        "enum": ["Africa", "Americas", "Antarctic", "Asia", "Europe", "Oceania"]
+      },
+      "subregion": {
+        "type": "string"
+      },
+      "languages": {
+        "type": "object"
+      },
+      "currencies": {
+        "type": "object"
+      },
+      "population": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "area": {
+        "type": "number",
+        "minimum": 0
+      },
+      "timezones": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "flags": {
+        "type": "object",
+        "properties": {
+          "png": {
+            "type": "string",
+            "format": "uri"
+          },
+          "svg": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    }
+  }
+}

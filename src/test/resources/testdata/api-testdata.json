@@ -1,0 +1,97 @@
+{
+  "countries": {
+    "Germany": {
+      "name": "Germany",
+      "capital": "Berlin",
+      "region": "Europe",
+      "alpha2Code": "DE",
+      "alpha3Code": "DEU"
+    },
+    "France": {
+      "name": "France",
+      "capital": "Paris",
+      "region": "Europe",
+      "alpha2Code": "FR",
+      "alpha3Code": "FRA"
+    },
+    "unitedStates": {
+      "name": "United States",
+      "capital": "Washington, D.C.",
+      "region": "Americas",
+      "alpha2Code": "US",
+      "alpha3Code": "USA",
+      "currency": "USD"
+    },
+    "japan": {
+      "name": "Japan",
+      "capital": "Tokyo",
+      "region": "Asia",
+      "alpha2Code": "JP",
+      "alpha3Code": "JPN",
+      "currency": "JPY"
+    }
+  },
+  "regions": {
+    "Europe": "Europe",
+    "Americas": "Americas",
+    "Asia": "Asia",
+    "Africa": "Africa",
+    "Oceania": "Oceania",
+    "invalid": "invalidRegion"
+  },
+  "currencies": {
+    "usd": {
+      "code": "usd",
+      "expectedCountry": "United States"
+    },
+    "eur": {
+      "code": "eur",
+      "expectedCountry": "Germany"
+    },
+    "jpy": {
+      "code": "jpy",
+      "expectedCountry": "Japan"
+    },
+    "invalid": {
+      "code": "xyz123",
+      "expectedCountry": null
+    }
+  },
+  "languages": {
+    "Spanish": {
+      "code": "Spanish",
+      "expectedCountry": "Spain"
+    },
+    "English": {
+      "code": "English",
+      "expectedCountry": "United Kingdom"
+    },
+    "french": {
+      "code": "french",
+      "expectedCountry": "France"
+    },
+    "invalid": {
+      "code": "Klingon",
+      "expectedCountry": null
+    }
+  },
+  "capitals": {
+    "Berlin": {
+      "name": "Berlin",
+      "expectedCountry": "Germany"
+    },
+    "Paris": {
+      "name": "Paris",
+      "expectedCountry": "France"
+    },
+    "invalid": {
+      "name": "notaCapital123",
+      "expectedCountry": null
+    }
+  },
+  "invalidData": {
+    "countryName": "NonExistentCountryXYZ123",
+    "countryCode": "XYZ"
+  },
+  "fields": ["name", "capital", "currencies"]
+}
