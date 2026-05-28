@@ -87,7 +87,6 @@ docs/
 | Assertions | TestNG Assert | Built-in assertions |
 | Reporting | ExtentReports | Rich HTML reports |
 | Test Data | JavaFaker | Realistic test data generation |
-| Accessibility | axe-core | WCAG compliance testing |
 | Schema Validation | json-schema-validator | API response validation |
 
 ## Systems Under Test
